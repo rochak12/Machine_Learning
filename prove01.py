@@ -35,7 +35,7 @@ print(accuracy_score(yTest, target_predicated) * 100)
 
 
 
-'''
+
 class HardCodedClassifier:
     
     def fit(self, xtrain, ytrain):
@@ -48,10 +48,9 @@ class HardCodedClassifier:
     
 class1  = HardCodedClassifier()
 class1.fit(xTrain, yTrain)
-print(class1.predict(yTest))
-
-'''
-
+aaa = class1.predict(yTest)
+print(accuracy_score(yTest, aaa) * 100)
+print(yTest, aaa)
 
 
 
