@@ -1,6 +1,4 @@
 
-
-
 #Using sklearn library
 from sklearn import datasets
 iris = datasets.load_iris()
@@ -52,7 +50,9 @@ print(yTest, aaa)
 #using pandas library
 #import pandas
 #raw_data = open(r"C:\Users\Rochak\Desktop\Machine Learning Exercise\iris.data")
+#this is using pandas
 #data = pandas.read_csv(r"C:\Users\Rochak\Desktop\Machine Learning Exercise\iris.data")
+#this is using numpy
 #data = numpy.loadtxt(raw_data, delimiter = ",") 
 #x = data.iloc[:, 0:4 ]
 #y = data.iloc[:, -1] 
