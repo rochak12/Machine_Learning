@@ -46,7 +46,7 @@ data = pandas.read_csv(r"C:\Users\Rochak\Desktop\Machine Learning Exercise\breas
 #print(data.head())
 #[print(column) for column in data.columns]
 
-df = pandas.DataFrame(data, columns = ['no-recurrence-events',  '30-39',  'premeno', '30-34', '0-2', 'no', '3',  'left', 'left_low', 'no.1'])
+df = pandas.get_dummies(data, columns = ['no-recurrence-events',  '30-39',  'premeno', '30-34', '0-2', 'no', '3',  'left', 'left_low', 'no.1'])
 print(df)
 x = data.iloc[0:, :-1]
 y = data.iloc[0:, -1]
