@@ -52,4 +52,5 @@ classifier.fit(xTrain, yTrain)
 predictions = classifier.predict(xTest)
 print(predictions)
 
+print(classifier.score(xTest, yTest))
 [print(pred,'\t\t', real,'\n') for pred, real in zip(predictions, yTest)]

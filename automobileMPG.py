@@ -55,7 +55,15 @@ x,y = shuffle(x,y, random_state = 0)
 xTrain, xTest, yTrain, yTest = train_test_split(x,y, test_size = 0.3, random_state = 0)
 classifier = KNeighborsRegressor(n_neighbors = 3)
 
+
 classifier.fit(xTrain, yTrain)
 predictions = classifier.predict(xTest)
-print(predictions)
+#print(predictions)
+
+print(classifier.score(xTest, yTest))
+#score(self, x, y, sample_weight=None)[source]
+# =============================================================================
+# 
 [print(pred, real,'\n') for pred, real in zip(predictions, yTest)]
+# 
+# =============================================================================

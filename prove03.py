@@ -56,11 +56,11 @@ for column in columns_with_object:
     
 columns_with_object = data.select_dtypes(include=["object"]).columns
 print(columns_with_object)    
-print(data)
+#print(data)
 
    
 data = data.drop(columns=["buying", "maint", "doors", "persons", "lug_boot", "safety", "classvalue"])
-print(data)
+#print(data)
       
 
 
