@@ -64,7 +64,7 @@ model.compile(optimizer, loss='mean_absolute_error', metrics=['accuracy'])
 print('Neural Network Model Summary: ')
 print(model.summary())
 
-model.fit(xTrain, yTrain, validation_data = (xTest, yTest) ,validation_split = 0.2, batch_size=10, epochs=100)
+model.fit(xTrain, yTrain, validation_data = (xTest, yTest) ,validation_split = 0.2, batch_size=100, epochs=1000)
 
 #test the model
 predictions = model.predict(xTest)
@@ -73,7 +73,8 @@ predictions = model.predict(xTest)
 range = 0
 notrange = 0
 for pred, yTe in zip(predictions, yTest):
-    if (pred - yTe < 0.1 or yTe - pred < 1):
+    print(pred , yTe)
+    if ((pred - yTe <= 2 and pred - yTe >= 0) or (yTe - pred <= 2 and yTe - pred >= 0)):
         range += 1
     else:
         notrange += 1

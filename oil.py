@@ -49,6 +49,18 @@ classifier.fit(xTrain, yTrain)
 #tree.plot_tree(classifier.fit(xTrain, yTrain)) 
 yPred = classifier.predict(xTest)
 
+
+
+range = 0
+notrange = 0
+for pred, yTe in zip(yPred, yTest):
+    print( pred, "and", yTe, "and")
+#print(zip(yTest, xTest))
+    if (pred - yTe <= 5 and pred - yTe >= 0) or (yTe - pred <= 5 and yTe - pred >= 0):
+        range += 1
+    else:
+        notrange += 1
+print(range/(notrange+range) *100 ) 
 print("Accuracy: ",  metrics.r2_score(yTest,yPred))
 
 # =============================================================================

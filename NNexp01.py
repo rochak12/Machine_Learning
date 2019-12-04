@@ -40,10 +40,10 @@ model.add(Dense(10, activation='relu', name='fc2'))
 model.add(Dense(3, activation ='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
               
-model.fit(xTrain, yTrain, validation_data = (xTest, yTest), epochs=1000)
+model.fit(xTrain, yTrain, validation_data = (xTest, yTest), epochs=1000, batch_size = 100)
 
 
 results = model.evaluate(xTest, yTest)
 print(results)
 
-#accuracy 93%
+#accuracy 98%
