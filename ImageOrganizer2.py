@@ -6,7 +6,7 @@
 
 import os
 # create new folders inside train_dir
-train_dir = 'C:/Users/Holt/Documents/MRMFinal/Faces'
+train_dir = 'C:\Users\Rochak\Desktop\Machine Learning Exercise\MRMFinal\Faces'
 nv = os.path.join(train_dir, 'Male')
 os.mkdir(nv)
 mel = os.path.join(train_dir, 'Female')
@@ -16,7 +16,7 @@ os.mkdir(mel)
 # In[40]:
 
 
-data_dir = 'C:/Users/Holt/Documents/MRMFinal/lfw-deepfunneled'
+data_dir = '/lfw-deepfunneled'
 
 import pandas as pd
 
@@ -57,7 +57,7 @@ for i in range(len(names)):
         print(dir_name)
         files = [f for f in os.listdir(dir_name) if os.path.isfile(os.path.join(dir_name, f))]
         for f in files:
-            shutil.copy(os.path.join(directory, f), os.path.join('C:/Users/Holt/Documents/MRMFinal/Faces/Female', f))
+            shutil.copy(os.path.join(directory, f), os.path.join('C:\Users\Rochak\Desktop\Machine Learning Exercise\MRMFinal\Faces\Female', f))
 
 
 # In[ ]:
