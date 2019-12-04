@@ -80,7 +80,6 @@ print("Accuracy: ",  metrics.r2_score(yTest,yPred))
 
 
 
-
 # =============================================================================
 # 
 # import pandas
@@ -112,12 +111,21 @@ print("Accuracy: ",  metrics.r2_score(yTest,yPred))
 #     
 # x = data.iloc[0:, 1:]
 # y = data.iloc[0:, 0]
-# x,y = shuffle(x,y, random_state = 0)
-# xTrain, xTest, yTrain, yTest = train_test_split(x,y, test_size = 0.3, random_state = 0)
+# #x,y = shuffle(x,y, random_state = 0)
+# xTrain, xTest, yTrain, yTest = train_test_split(x,y, test_size = 0.3, shuffle=False)
 # classifier = linear_model.LinearRegression()
 # classifier.fit(xTrain, yTrain)
 # predictions = classifier.predict(xTest)
-# #print(accuracy_score(yTest, predictions) * 100)
-# print(metrics.r2_score(yTest,predictions))
+# 
+# range = 0
+# notrange = 0
+# for pred, yTe in zip(predictions, yTest):
+#     if (pred - yTe < 0.1 or yTe - pred < 1):
+#         range += 1
+#     else:
+#         notrange += 1
+# print(range/(notrange+range) *100 )  
+# # #print(accuracy_score(yTest, predictions) * 100)
+# # print(metrics.r2_score(yTest,predictions))
 # 
 # =============================================================================

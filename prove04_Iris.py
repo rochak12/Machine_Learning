@@ -20,10 +20,12 @@ Class = (np.unique(data.Class))
 
 xTrain, xTest, yTrain, yTest = train_test_split(x,y, test_size = 0.3, random_state = 0)
 
+
 classifier = DecisionTreeClassifier(criterion = "entropy", random_state= 100, max_depth = 3, min_samples_leaf = 3)
 classifier.fit(xTrain, yTrain)
 #tree.plot_tree(classifier.fit(xTrain, yTrain)) 
 yPred = classifier.predict(xTest)
+
 
 # =============================================================================
 print ("Accuracy : ", accuracy_score(yTest,yPred)*100) 

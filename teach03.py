@@ -59,14 +59,9 @@ for column in columns_with_object:
     data[column] = data[column].astype('category')
     temp = column+"_cat"
     data[temp] = data[column].cat.codes
-  
-    
-    
-    
+       
 columns_with_object = data.select_dtypes(include=["object"]).columns
 #print(columns_with_object)    
-
-
    
 data = data.drop(columns=["workclass", "education", "marital_status", "occupation",
                    "relationship","race", "sex", "native_country", "income"])

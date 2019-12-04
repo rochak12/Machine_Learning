@@ -14,7 +14,7 @@ from sklearn.linear_model import LogisticRegression
 names = ["buying", "maint", "doors", "persons", "lug_boot", "safety", "classvalue"]
 data = pandas.read_csv(r"C:\Users\Rochak\Desktop\Machine Learning Exercise\car.data", names=names, na_values=["?"], skipinitialspace = True, header=None)
 # =============================================================================
-#print(data)
+print(data)
 #print(data.dtypes)
 #print("Median age" , data.doors.median())
 #print(data.doors.value_counts())
